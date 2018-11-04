@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<scene height="1080" width="1920">
+	<size>
+		<xl>-150</xl>
+		<xh>350</xh>
+		<yl>-50</yl>
+		<yh>350</yh>
+		<zl>-5</zl>
+		<zh>100</zh>
+	</size>
+	<background>
+		<r>0.1</r><g>0.11</g><b>0.11</b>
+	</background>
+	<camera>
+		<pos> <!-- -8 -40 30 -->
+			<x>-8</x>
+			<y>-40</y>
+			<z>20</z>
+		</pos>
+		<dir> <!-- 0.65 3.2 -1.5 -->
+			<x>0.4</x>
+			<y>3.2</y>
+			<z>-1</z>
+		</dir>
+		<aperture>0.07</aperture>
+		<focal>58</focal> <!-- dragon 58, cat2 81 -->
+		<dist>6.5</dist> <!-- 6.5 0.01 -->
+		<unit>0.008</unit>
+	</camera>
+	<lights>
+		<light id="0">
+			<type>Plane</type>
+			<color>
+				<r>1</r>
+				<g>1</g>
+				<b>1</b>
+			</color>
+			<ul><x>5</x><y>0</y><z>30</z></ul>
+			<dr><x>20</x><y>15</y><z>30</z></dr>
+			<norm><x>0</x><y>0</y><z>-1</z></norm>
+		</light>
+		<light id="1">
+			<type>Plane</type>
+			<color>
+				<r>1</r>
+				<g>1</g>
+				<b>1</b>
+			</color>
+			<ul><x>-15</x><y>0</y><z>30</z></ul>
+			<dr><x>0</x><y>15</y><z>30</z></dr>
+			<norm><x>0</x><y>0</y><z>-1</z></norm>
+		</light>
+	</lights>
+	<objects>
+		<object id="0">				<!-- floor z=-1 -->
+			<type>Plane</type>
+			<norm>
+				<x>0</x>
+				<y>0</y>
+				<z>1</z>
+			</norm>
+			<ul><x>-100</x><y>-40</y><z>-1</z></ul>
+			<dr><x>100</x><y>200</y><z>-1</z></dr>
+			<color>
+				<r>0.5</r>
+				<g>0.5</g>
+				<b>0.5</b>
+			</color>
+			<diff>0.4</diff>
+			<refl>0.6</refl>
+			<texture>texture/floor</texture>
+			<texU>0.05</texU><texV>0.05</texV>
+		</object>
+		<object id="7">
+			<type>Others</type>
+			<pos>
+				<x>-6.2</x>
+				<y>14</y>
+				<z>2.3</z>
+			</pos>
+			<scale>7</scale>
+			<color>
+				<r>0.6</r>
+				<g>0.5</g>
+				<b>0.6</b>
+			</color>
+			<refl>0.2</refl>
+			<refr>0.8</refr>
+			<absorbcolor>
+				<r>0.1</r><g>0</g><b>0.1</b>
+			</absorbcolor>
+			<rindex>1.7</rindex>
+			<obj>models/dragon.obj</obj>
+		</object>
+		<object id="1">
+			<type>Others</type>
+			<pos>
+				<x>11.5</x>
+				<y>38</y>
+				<z>1.56</z>
+			</pos>
+			<scale>0.12</scale>
+			<color>
+				<r>0.6</r>
+				<g>0.7</g>
+				<b>0.6</b>
+			</color>
+			<diff>0.4</diff>
+			<spec>0.4</spec>
+			<refl>0.2</refl>
+			<obj>models/kitten2.obj</obj>
+		</object>
+		<!-- 地球仪 -->
+		<!--object id="10">
+			<type>Sphere</type>
+			<center>
+				<x>-3.5</x>
+				<y>16</y>
+				<z>2</z>
+			</center>
+			<r>3</r>
+			<color>
+				<r>1</r>
+				<g>1</g>
+				<b>1</b>
+			</color>
+			<diff>0.55</diff>
+			<texture>texture/world.bmp</texture>
+		</object-->
+	</objects>
+</scene>
